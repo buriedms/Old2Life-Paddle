@@ -40,19 +40,19 @@ class BaseModel(paddle.nn.Layer):
 
     # helper saving function that can be used by subclasses
     def save_network(self, network, network_label, epoch_label, gpu_ids):
-        save_filename = "%s_net_%s.pth" % (epoch_label, network_label)
+        save_filename = "%s_net_%s.pdparams" % (epoch_label, network_label)
         save_path = os.path.join(self.save_dir, save_filename)
         paddle.save(network.state_dict(), save_path)
 
     def save_optimizer(self, optimizer, optimizer_label, epoch_label):
-        save_filename = "%s_optimizer_%s.pth" % (epoch_label, optimizer_label)
+        save_filename = "%s_optimizer_%s.pdparams" % (epoch_label, optimizer_label)
         save_path = os.path.join(self.save_dir, save_filename)
         paddle.save({'parameters': optimizer.state_dict(), 'lr': optimizer.get_lr()}, save_path)
 
     def load_optimizer(self, optimizer, optimizer_label, epoch_label, save_dir=""):
-        save_filename = "%s_optimizer_%s.pth" % (epoch_label, optimizer_label)
+        save_filename = "%s_optimizer_%s.pdparams" % (epoch_label, optimizer_label)
         if not save_dir:
-            save_dir = self.save_dir
+            save_dir = self.save_dirg
         save_path = os.path.join(save_dir, save_filename)
 
         if not os.path.isfile(save_path):
@@ -63,7 +63,7 @@ class BaseModel(paddle.nn.Layer):
 
     # helper loading function that can be used by subclasses
     def load_network(self, network, network_label, epoch_label, save_dir=""):
-        save_filename = "%s_net_%s.pth" % (epoch_label, network_label)
+        save_filename = "%s_net_%s.pdparams" % (epoch_label, network_label)
         if not save_dir:
             save_dir = self.save_dir
         save_path = os.path.join(save_dir, save_filename)
