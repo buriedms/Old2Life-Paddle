@@ -1,0 +1,22 @@
+python Global/test_Elm.py \
+  --test_mode Full --Quality_restore \
+  --use_v2_degradation \
+  --name mapping_quality \
+  --label_nc 0 \
+  --loadSize 256 \
+  --fineSize 256 \
+  --no_instance \
+  --resize_or_crop crop_only \
+  --batchSize 32 \
+  --gpu_ids -1 \
+  --nThreads 4 \
+  --n_downsample_global 3 \
+  --mc 64 --k_size 4 \
+  --start_r 1 --mapping_n_block 6 \
+  --map_mc 512 \
+  --which_epoch latest \
+  --load_pretrainA /D/Desktop/plan/Old2Life/Global/checkpoints/domainA_SR_old_photos \
+  --load_pretrainB /D/Desktop/plan/Old2Life/Global/checkpoints/domainB_old_photos \
+  --checkpoints_dir D:\\Desktop\\plan\\Old2Life\\Global\\checkpoints \
+  --test_input /D/Desktop/okok/test \
+  --outputs_dir /D/Desktop/okok/me

@@ -1,0 +1,26 @@
+python Global/test_Sea.py \
+  --use_v2_degradation \
+  --training_dataset mapping \
+  --name mapping_quality \
+  --label_nc 0 \
+  --loadSize 256 \
+  --fineSize 256 \
+  --no_instance \
+  --resize_or_crop crop_only \
+  --batchSize 8 --no_html \
+  --gpu_ids 0 \
+  --nThreads 4 \
+  --l2_feat 60 \
+  --n_downsample_global 3 \
+  --mc 64 --k_size 4 \
+  --start_r 1 --mapping_n_block 6 \
+  --map_mc 512 --use_l1_feat \
+  --use_vae_which_epoch latest \
+  --which_epoch latest \
+  --load_pretrainA /D/Desktop/plan/Old2Life/Global/checkpoints/domainA_SR_old_photos \
+  --load_pretrainB /D/Desktop/plan/Old2Life/Global/checkpoints/domainB_old_photos \
+  --load_pretrain D:\\Desktop\\plan\\Old2Life\\Global\\checkpoints\\mapping_quality \
+  --dataroot D:\\Desktop\\plan\\Old2Life\\Global\\test_old \
+  --checkpoints_dir D:\\Desktop\\plan\\Old2Life\\Global\\checkpoints \
+  --outputs_dir /D/Desktop/plan/Old2Life/Global/outputs
+
