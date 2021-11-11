@@ -10,14 +10,11 @@ aistudio项目链接地址：https://aistudio.baidu.com/aistudio/projectdetail/2
 
 数据集采用VOC数据集，和小部分真实老照片，老照片[数据地址](https://www.hpcbristol.net/photographers)
 
-模型及配置文件存放网盘链接：https://pan.baidu.com/s/1cHqzIwtIEv92wsGOrxQwiQ 
-提取码：fjng  
+模型及配置文件存放[网盘链接](https://pan.baidu.com/s/1cHqzIwtIEv92wsGOrxQwiQ )，提取码：fjng  
 
-可视化效果图网盘链接：https://pan.baidu.com/s/1uzyHsURuNDw1Kv0vPbrR8Q 
-提取码：s32p   
+可视化效果图[网盘链接](https://pan.baidu.com/s/1uzyHsURuNDw1Kv0vPbrR8Q )，提取码：s32p   
 
-训练数据网盘链接：https://pan.baidu.com/s/1cBgs5zntYFbXDfhvht7dPg 
-提取码：9uk6
+训练数据[网盘链接](https://pan.baidu.com/s/1cBgs5zntYFbXDfhvht7dPg )，提取码：9uk6
 
 训练精度指标达标情况：  
 
@@ -85,6 +82,11 @@ bash test_Elm.sh
 + `output_dir`：转换的图片输出路径。  
   例如：`/home/aistudio/work/Old2Life/output/`
   
+## 数据集方面介绍
+数据集可以通过两种方式获取：
+1. 通过[网盘链接]( )下载数据集
+2. 通过[自定义数据文件](Global/data/readme.md )进行创建
+  
 ## 效果图展示
 
 上方为测试原图，下方为重建图片  
@@ -94,4 +96,4 @@ bash test_Elm.sh
 进行训练了200个epoch的结果，我们有理由相信，我们所展示的效果不会是最佳效果，随着训练轮数
 的上升，重建效果仍旧可以有所提升。
 
-![效果图](./imgs/result.png)
+![效果图](imgs/result.png)
