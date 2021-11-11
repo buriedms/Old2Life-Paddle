@@ -1,6 +1,3 @@
-# Copyright (c) Microsoft Corporation.
-# Licensed under the MIT License.
-
 import numpy as np
 import os
 import ntpath
@@ -8,7 +5,6 @@ import time
 from . import util
 import paddle.distributed as dist
 import paddle
-# from . import html
 import scipy.misc
 import logging
 

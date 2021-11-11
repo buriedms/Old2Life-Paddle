@@ -1,5 +1,3 @@
-# Copyright (c) Microsoft Corporation.
-# Licensed under the MIT License.
 # coding=utf-8
 
 from .base_options import BaseOptions

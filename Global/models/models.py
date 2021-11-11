@@ -1,7 +1,3 @@
-# Copyright (c) Microsoft Corporation.
-# Licensed under the MIT License.
-
-# import torch
 import paddle
 
 def create_model(opt):

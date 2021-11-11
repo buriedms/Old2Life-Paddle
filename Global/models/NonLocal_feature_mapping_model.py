@@ -1,14 +1,9 @@
-# Copyright (c) Microsoft Corporation.
-# Licensed under the MIT License.
-
 import numpy as np
 import paddle
 import paddle.nn as nn
 import paddle.nn.functional as F
 import os
 import functools
-# from torch.autograd import Variable
-# from util.image_pool import ImagePool
 from .base_model import BaseModel
 from . import networks
 import math

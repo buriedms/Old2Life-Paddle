@@ -1,7 +1,3 @@
-# Copyright (c) Microsoft Corporation.
-# Licensed under the MIT License.
-
-# import torch.utils.data as data
 import paddle.io
 from PIL import Image
 import os

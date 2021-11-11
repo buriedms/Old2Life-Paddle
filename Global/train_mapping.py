@@ -1,6 +1,3 @@
-# Copyright (c) Microsoft Corporation.
-# Licensed under the MIT License.
-
 import time
 from collections import OrderedDict
 from options.train_options import TrainOptions
@@ -10,7 +7,6 @@ import util.util as util
 from util.visualizer import Visualizer
 import os
 import numpy as np
-
 import paddle
 import torchvision_paddle.utils as vutils
 import datetime

@@ -96,8 +96,6 @@ def calculate_gain(nonlinearity, param=None):
         nonlinearity: the non-linear function (`nn.functional` name)
         param: optional parameter for the non-linear function
 
-    Examples:
-        >>> gain = nn.init.calculate_gain('leaky_relu', 0.2)  # leaky_relu with negative_slope=0.2
     """
     linear_fns = ['linear', 'conv1d', 'conv2d', 'conv3d', 'conv_transpose1d', 'conv_transpose2d', 'conv_transpose3d']
     if nonlinearity in linear_fns or nonlinearity == 'sigmoid':
@@ -130,9 +128,6 @@ def uniform_(tensor: Tensor, a: float = 0., b: float = 1.) -> Tensor:
         a: the lower bound of the uniform distribution
         b: the upper bound of the uniform distribution
 
-    Examples:
-        >>> w = torch.empty(3, 5)
-        >>> nn.init.uniform_(w)
     """
     return _no_grad_uniform_(tensor, a, b)
 
@@ -146,9 +141,6 @@ def normal_(tensor: Tensor, mean: float = 0., std: float = 1.) -> Tensor:
         mean: the mean of the normal distribution
         std: the standard deviation of the normal distribution
 
-    Examples:
-        >>> w = torch.empty(3, 5)
-        >>> nn.init.normal_(w)
     """
     return _no_grad_normal_(tensor, mean, std)
 
@@ -168,9 +160,6 @@ def trunc_normal_(tensor: Tensor, mean: float = 0., std: float = 1., a: float = 
         a: the minimum cutoff value
         b: the maximum cutoff value
 
-    Examples:
-        >>> w = torch.empty(3, 5)
-        >>> nn.init.trunc_normal_(w)
     """
     return _no_grad_trunc_normal_(tensor, mean, std, a, b)
 
@@ -182,9 +171,6 @@ def constant_(tensor: Tensor, val: float) -> Tensor:
         tensor: an n-dimensional `torch.Tensor`
         val: the value to fill the tensor with
 
-    Examples:
-        >>> w = torch.empty(3, 5)
-        >>> nn.init.constant_(w, 0.3)
     """
     return _no_grad_fill_(tensor, val)
 
@@ -195,9 +181,6 @@ def ones_(tensor: Tensor) -> Tensor:
     Args:
         tensor: an n-dimensional `torch.Tensor`
 
-    Examples:
-        >>> w = torch.empty(3, 5)
-        >>> nn.init.ones_(w)
     """
     return _no_grad_fill_(tensor, 1.)
 
@@ -207,10 +190,6 @@ def zeros_(tensor: Tensor) -> Tensor:
 
     Args:
         tensor: an n-dimensional `torch.Tensor`
-
-    Examples:
-        >>> w = torch.empty(3, 5)
-        >>> nn.init.zeros_(w)
     """
     return _no_grad_zero_(tensor)
 
@@ -223,9 +202,6 @@ def eye_(tensor):
     Args:
         tensor: a 2-dimensional `torch.Tensor`
 
-    Examples:
-        >>> w = torch.empty(3, 5)
-        >>> nn.init.eye_(w)
     """
     if tensor.ndimension() != 2:
         raise ValueError("Only tensors with 2 dimensions are supported")
@@ -244,11 +220,6 @@ def dirac_(tensor, groups=1):
     Args:
         tensor: a {3, 4, 5}-dimensional `torch.Tensor`
         groups (optional): number of groups in the conv layer (default: 1)
-    Examples:
-        >>> w = torch.empty(3, 16, 5, 5)
-        >>> nn.init.dirac_(w)
-        >>> w = torch.empty(3, 24, 5, 5)
-        >>> nn.init.dirac_(w, 3)
     """
     dimensions = tensor.ndimension()
     if dimensions not in [3, 4, 5]:
@@ -310,9 +281,6 @@ def xavier_uniform_(tensor: Tensor, gain: float = 1.) -> Tensor:
         tensor: an n-dimensional `torch.Tensor`
         gain: an optional scaling factor
 
-    Examples:
-        >>> w = torch.empty(3, 5)
-        >>> nn.init.xavier_uniform_(w, gain=nn.init.calculate_gain('relu'))
     """
     fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)
     std = gain * math.sqrt(2.0 / float(fan_in + fan_out))
@@ -337,9 +305,6 @@ def xavier_normal_(tensor: Tensor, gain: float = 1.) -> Tensor:
         tensor: an n-dimensional `torch.Tensor`
         gain: an optional scaling factor
 
-    Examples:
-        >>> w = torch.empty(3, 5)
-        >>> nn.init.xavier_normal_(w)
     """
     fan_in, fan_out = _calculate_fan_in_and_fan_out(tensor)
     std = gain * math.sqrt(2.0 / float(fan_in + fan_out))
@@ -380,9 +345,7 @@ def kaiming_uniform_(tensor, a=0, mode='fan_in', nonlinearity='leaky_relu'):
         nonlinearity: the non-linear function (`nn.functional` name),
             recommended to use only with ``'relu'`` or ``'leaky_relu'`` (default).
 
-    Examples:
-        >>> w = torch.empty(3, 5)
-        >>> nn.init.kaiming_uniform_(w, mode='fan_in', nonlinearity='relu')
+
     """
     fan = _calculate_correct_fan(tensor, mode)
     gain = calculate_gain(nonlinearity, a)
@@ -416,9 +379,7 @@ def kaiming_normal_(tensor, a=0, mode='fan_in', nonlinearity='leaky_relu'):
         nonlinearity: the non-linear function (`nn.functional` name),
             recommended to use only with ``'relu'`` or ``'leaky_relu'`` (default).
 
-    Examples:
-        >>> w = torch.empty(3, 5)
-        >>> nn.init.kaiming_normal_(w, mode='fan_out', nonlinearity='relu')
+
     """
     fan = _calculate_correct_fan(tensor, mode)
     gain = calculate_gain(nonlinearity, a)
@@ -439,9 +400,6 @@ def orthogonal_(tensor, gain=1):
         tensor: an n-dimensional `torch.Tensor`, where :math:`n \geq 2`
         gain: optional scaling factor
 
-    Examples:
-        >>> w = torch.empty(3, 5)
-        >>> nn.init.orthogonal_(w)
     """
     if tensor.ndimension() < 2:
         raise ValueError("Only tensors with 2 or more dimensions are supported")
@@ -481,10 +439,6 @@ def sparse_(tensor, sparsity, std=0.01):
         sparsity: The fraction of elements in each column to be set to zero
         std: the standard deviation of the normal distribution used to generate
             the non-zero values
-
-    Examples:
-        >>> w = torch.empty(3, 5)
-        >>> nn.init.sparse_(w, sparsity=0.1)
     """
     if tensor.ndimension() != 2:
         raise ValueError("Only tensors with 2 dimensions are supported")

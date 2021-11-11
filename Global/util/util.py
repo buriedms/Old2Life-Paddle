@@ -1,18 +1,12 @@
-# Copyright (c) Microsoft Corporation.
-# Licensed under the MIT License.
-
 from __future__ import print_function
-# import torch
 from PIL import Image
 import numpy as np
 import os
-# import torch.nn as nn
 from .PSNR_SSIM import PSNR
 from .PSNR_SSIM import SSIM
 from .FID import FID
 from .LPIPS import LPIPSMetric as LPIPS
 import paddle
-import paddle.nn as nn
 
 class IsSave():
     def __init__(self,border=2):

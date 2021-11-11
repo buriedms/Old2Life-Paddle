@@ -1,11 +1,5 @@
-# Copyright (c) Microsoft Corporation.
-# Licensed under the MIT License.
-
 import random
-# import torch
-# from torch.autograd import Variable
 import paddle
-from paddle.autograd import PyLayer
 
 
 class ImagePool:
@@ -34,5 +28,6 @@ class ImagePool:
                     return_images.append(tmp)
                 else:
                     return_images.append(image)
-        return_images = PyLayer(paddle.concat(return_images, 0))  #todo 可能有误
+
+        return_images = paddle.to_tensor(paddle.concat(return_images, 0),stop_gradient=False)
         return return_images

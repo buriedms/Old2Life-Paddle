@@ -1,12 +1,6 @@
-# Copyright (c) Microsoft Corporation.
-# Licensed under the MIT License.
-
 import numpy as np
-# import torch
 import paddle
-# from paddle.autograd import PyLayer
 import os
-# from torch.autograd import PyLayer
 from util.image_pool import ImagePool
 from .base_model import BaseModel
 from . import networks

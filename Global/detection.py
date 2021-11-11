@@ -1,6 +1,3 @@
-# Copyright (c) Microsoft Corporation.
-# Licensed under the MIT License.
-
 import argparse
 import gc
 import json
@@ -9,9 +6,6 @@ import time
 import warnings
 
 import numpy as np
-# import torch
-# import torch.nn.functional as F
-# import torchvision as tv
 from PIL import Image, ImageFile
 import paddle
 import paddle.nn.functional as F

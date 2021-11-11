@@ -11,10 +11,6 @@
 import collections
 import contextlib
 
-# import torch
-# import torch.nn.functional as F
-# from torch.nn.modules.batchnorm import _BatchNorm
-
 import paddle
 import paddle.nn.functional as F
 try:

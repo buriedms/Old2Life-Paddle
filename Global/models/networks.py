@@ -1,6 +1,3 @@
-# Copyright (c) Microsoft Corporation.
-# Licensed under the MIT License.
-
 import paddle
 import paddle.nn as nn
 import fold as fold

@@ -1,6 +1,3 @@
-# Copyright (c) Microsoft Corporation.
-# Licensed under the MIT License.
-
 import os
 import sys
 import time
@@ -8,11 +5,6 @@ import shutil
 import platform
 import numpy as np
 from datetime import datetime
-
-# import torch
-# import torchvision as tv
-# import torchvision.utils as vutils
-# import torch.backends.cudnn as cudnn
 
 import paddle
 import paddle.nn as nn

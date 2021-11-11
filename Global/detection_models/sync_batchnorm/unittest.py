@@ -9,7 +9,6 @@
 # Distributed under MIT License.
 
 import unittest
-# import torch
 import paddle
 
 class TorchTestCase(unittest.TestCase):

@@ -1,11 +1,6 @@
-# Copyright (c) Microsoft Corporation.
-# Licensed under the MIT License.
-
-import paddle
 import paddle.io
 from PIL import Image
 import paddle.vision.transforms as transforms
-from torchvision_paddle.Lambda import Lambda
 import numpy as np
 import random
 from torchvision_paddle.Lambda import Lambda

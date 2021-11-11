@@ -2,16 +2,9 @@
 # Licensed under the MIT License.
 
 import numpy as np
-
-# import torch
-# import torch.nn.parallel
-# import torch.nn as nn
-# import torch.nn.functional as F
-
 import paddle
 import paddle.nn as nn
 import paddle.nn.functional as F
-
 
 class Downsample(nn.Layer):
     # https://github.com/adobe/antialiased-cnns

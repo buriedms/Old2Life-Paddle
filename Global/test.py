@@ -1,18 +1,11 @@
-# Copyright (c) Microsoft Corporation.
-# Licensed under the MIT License.
-
 import os
 from paddle import Tensor
 from collections import OrderedDict
-# from torch.autograd import Variablep
 from options.test_options import TestOptions
 from models.models import create_model
 from models.mapping_model import Pix2PixHDModel_Mapping
 import util.util as util
 from PIL import Image
-# import torch
-# import torchvision.utils as vutils
-# import torchvision.transforms as transforms
 import paddle
 import torchvision_paddle.utils as vutils
 import paddle.vision.transforms as transforms
