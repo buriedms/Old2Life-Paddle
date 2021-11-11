@@ -3,8 +3,11 @@
 # Old Photo Restoration (Paddle Implementation)
 
 aistudio项目链接地址：https://aistudio.baidu.com/aistudio/projectdetail/2524206?contributionType=1&shared=1  
+
 复现论文为：[Old Photo Restoration via Deep Latent Space Translation](https://paperswithcode.com/paper/old-photo-restoration-via-deep-latent-space)  
+
 官方开源 pytorch 代码：[Bringing-Old-Photos-Back-to-Life](https://github.com/microsoft/Bringing-Old-Photos-Back-to-Life)  
+
 数据集采用VOC数据集，和小部分真实老照片，老照片[数据地址](https://www.hpcbristol.net/photographers)
 
 模型及配置文件存放网盘链接：https://pan.baidu.com/s/1cHqzIwtIEv92wsGOrxQwiQ 
@@ -32,12 +35,15 @@ aistudio项目链接地址：https://aistudio.baidu.com/aistudio/projectdetail/2
   bash train.sh
   ```    
 + 如果想要训练单个阶段，可以通过如下命令执行。  
+  1. 训练第一阶段
   ```
   bash Global/run_a.sh
   ```  
+  2. 训练第二阶段
   ```
   bash Global/run_b.sh
   ```  
+  3. 训练第三阶段
   ```
   bash Global/run_map.sh
   ```  
@@ -82,6 +88,7 @@ bash test_Elm.sh
 ## 效果图展示
 
 上方为测试原图，下方为重建图片  
+
 可以明显发现，通过模型重建后的图片在观感上不论是清晰度还是色彩的饱和度都更加的令人满意，
 此效果是模型训练了20个epoch的结果，后续随着训练指标仍旧有所缓慢上升，原论文当中的结果是
 进行训练了200个epoch的结果，我们有理由相信，我们所展示的效果不会是最佳效果，随着训练轮数
