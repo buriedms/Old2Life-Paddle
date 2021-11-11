@@ -48,10 +48,14 @@ aistudio项目链接地址：https://aistudio.baidu.com/aistudio/projectdetail/2
 
 **1.查看测试指标**  
 终端在`Old2Life`目录下执行以下命令：  
-```bash test_Sea.sh```  
+```
+bash test_Sea.sh
+```  
 **2.查看图片重建可视化效果**  
 终端在`Old2Life`目录下执行以下命令：  
-```bash test_Elm.sh``` 
+```
+bash test_Elm.sh
+``` 
 
 **必选参数解释**   
 + `load_pretrainA`：存放A阶段训练模型的路径文件夹。  
