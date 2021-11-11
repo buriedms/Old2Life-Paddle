@@ -10,7 +10,7 @@ aistudio项目链接地址：https://aistudio.baidu.com/aistudio/projectdetail/2
 
 数据集采用VOC数据集，和小部分真实老照片，老照片[数据地址](https://www.hpcbristol.net/photographers)
 
-模型及配置文件存放[网盘链接](链接：https://pan.baidu.com/s/1bIM010BFmwl_neDzSX79Jg )，提取码：v9r2
+模型及配置文件存放[网盘链接](链接：链接：https://pan.baidu.com/s/1F-9k4KMPycJuyasotw9Cfw )，提取码：xfmp
 
 可视化效果图[网盘链接](https://pan.baidu.com/s/1uzyHsURuNDw1Kv0vPbrR8Q )，提取码：s32p   
 
