@@ -27,7 +27,7 @@ aistudio项目链接地址：https://aistudio.baidu.com/aistudio/projectdetail/2
 
 ## **训练方式**：
 
-+ 终端在`Old2Life`文件目录下执行以下命令：
++ 终端在`Old2Life-Paddle`文件目录下执行以下命令：
   ```
   bash train.sh
   ```    
@@ -55,12 +55,12 @@ aistudio项目链接地址：https://aistudio.baidu.com/aistudio/projectdetail/2
 ## **测试方式**： 
 
 **1.查看测试指标**  
-终端在`Old2Life`目录下执行以下命令：  
+终端在`Old2Life-Paddle`目录下执行以下命令：  
 ```
 bash test_Sea.sh
 ```  
 **2.查看图片重建可视化效果**  
-终端在`Old2Life`目录下执行以下命令：  
+终端在`Old2Life-Paddle`目录下执行以下命令：  
 ```
 bash test_Elm.sh
 ``` 
@@ -80,5 +80,11 @@ bash test_Elm.sh
   例如：`/home/aistudio/work/Old2Life/output/`
   
 ## 效果图展示
+
+上方为测试原图，下方为重建图片  
+可以明显发现，通过模型重建后的图片在观感上不论是清晰度还是色彩的饱和度都更加的令人满意，
+此效果是模型训练了20个epoch的结果，后续随着训练指标仍旧有所缓慢上升，原论文当中的结果是
+进行训练了200个epoch的结果，我们有理由相信，我们所展示的效果不会是最佳效果，随着训练轮数
+的上升，重建效果仍旧可以有所提升。
 
 ![效果图](./imgs/result.png)
