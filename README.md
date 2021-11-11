@@ -10,11 +10,11 @@ aistudio项目链接地址：https://aistudio.baidu.com/aistudio/projectdetail/2
 
 数据集采用VOC数据集，和小部分真实老照片，老照片[数据地址](https://www.hpcbristol.net/photographers)
 
-模型及配置文件存放[网盘链接](链接：链接：https://pan.baidu.com/s/1F-9k4KMPycJuyasotw9Cfw )，提取码：xfmp
+模型及配置文件存放[网盘链接](https://pan.baidu.com/s/1F-9k4KMPycJuyasotw9Cfw )，提取码：xfmp
 
 可视化效果图[网盘链接](https://pan.baidu.com/s/1uzyHsURuNDw1Kv0vPbrR8Q )，提取码：s32p   
 
-训练数据[网盘链接](链接：https://pan.baidu.com/s/1BRe9tY8Oa5DcAz5wrCoX_Q )，提取码：07oi
+训练数据[网盘链接](https://pan.baidu.com/s/1BRe9tY8Oa5DcAz5wrCoX_Q )，提取码：07oi
 
 训练精度指标达标情况：  
 
@@ -84,7 +84,7 @@ bash test_Elm.sh
   
 ## 数据集方面介绍
 数据集可以通过两种方式获取：
-1. 通过[网盘链接](链接：https://pan.baidu.com/s/1BRe9tY8Oa5DcAz5wrCoX_Q )下载数据集，
+1. 通过[网盘链接](https://pan.baidu.com/s/1BRe9tY8Oa5DcAz5wrCoX_Q )下载数据集，
    提取码：07oi
 2. 通过[自定义数据文件](Global/data/readme.md )进行创建
   
