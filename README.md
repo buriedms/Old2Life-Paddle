@@ -32,9 +32,11 @@ aistudio项目链接地址：https://aistudio.baidu.com/aistudio/projectdetail/2
   bash train.sh
   ```    
 + 如果想要训练单个阶段，可以通过如下命令执行。  
-  ```bash Global/run_a.sh
+  ```
+  bash Global/run_a.sh
   ```  
-  ```bash Global/run_b.sh
+  ```
+  bash Global/run_b.sh
   ```  
   ```
   bash Global/run_map.sh
