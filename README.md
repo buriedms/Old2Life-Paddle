@@ -28,11 +28,17 @@ aistudio项目链接地址：https://aistudio.baidu.com/aistudio/projectdetail/2
 ## **训练方式**：
 
 + 终端在`Old2Life`文件目录下执行以下命令：
-  ```bash train.sh```    
+  ```
+  bash train.sh
+  ```    
 + 如果想要训练单个阶段，可以通过如下命令执行。  
-  ```bash Global/run_a.sh```  
-  ```bash Global/run_b.sh```  
-  ```bash Global/run_map.sh```  
+  ```bash Global/run_a.sh
+  ```  
+  ```bash Global/run_b.sh
+  ```  
+  ```
+  bash Global/run_map.sh
+  ```  
 
 如果需要更改训练参数，可以在当中进行修改。  
 
