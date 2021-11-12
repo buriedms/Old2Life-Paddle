@@ -60,6 +60,7 @@ class BaseModel(paddle.nn.Layer):
         else:
             optimizer.set_state_dict(paddle.load(save_path)['parameters'])
             optimizer.set_lr(paddle.load(save_path)['lr'])
+            print('optimizer import path:', save_path)
 
     # helper loading function that can be used by subclasses
     def load_network(self, network, network_label, epoch_label, save_dir=""):
