@@ -48,12 +48,35 @@ aistudio项目链接地址：https://aistudio.baidu.com/aistudio/projectdetail/2
 如果需要更改训练参数，可以在当中进行修改。  
 
 **必选参数解释**  
-+ `dataroor`:存放图片数据的位置。格式为.bigfile。  
-  例如：`/home/aistudio/work/Old2Life/test_old`  
-+ `output_dir`:图片输出路径。第一行为扰动照片，第二行为生成的结果，第三行为训练目标。  
-  例如：`/home/aistudio/work/Old2Life/output/`
-+ `checkpoints_dir`:保存结果参数和训练日志存放路径。  
-  例如：`/home/aistudio/work/Old2Life/checkpoints \`
+
+| 参数 | 说明 | 案例 |
+|:---:|:---:|:---:|
+| `dataroor` | 存放图片数据的位置。格式为.bigfile。 | `--dataroot /home/aistudio/work/Old2Life/test_old` |
+| `output_dir` | 图片输出路径。第一行为扰动照片，第二行为生成的结果，第三行为训练目标。 | `--outputs_dir /home/aistudio/work/Old2Life/output/` |
+| `checkpoints_dir` | 保存结果参数和训练日志存放路径。 | `--checkpoints_dir /home/aistudio/work/Old2Life/test_checkpoints` |
+| **重要可选参数** | *-* | *-* |
+| `batchSize`| 一次训练选用的样本数量 | `--batchSize 64` |
+| `gpu_ids`| 选用的gpu序号 | `--gpu_ids 0,1,2,4` |
+| `use_vae_which_epoch` | 预训练选用的vae模型的版本 | `--use_vae_which_epoch latest` |
+| `which_epoch` | 预训练采用的模型版本 | `--which_epoch latest` |
+| `niter` | 学习率不衰减训练的轮数 | `--niter 15` |
+| `niter_decay`| 学习率衰减训练的轮数 | `--niter_decay 15` |
+| `continue_train`| 是否采用预训练模型进行持续学习，触发生效 | `--continue_train` |
+| `debug`| 是否启用debug模式，触发生效| `--debug` |
+
+
+
+[comment]: <> (+ `dataroor`:存放图片数据的位置。格式为.bigfile。  )
+
+[comment]: <> (  例如：`/home/aistudio/work/Old2Life/test_old`  )
+
+[comment]: <> (+ `output_dir`:图片输出路径。第一行为扰动照片，第二行为生成的结果，第三行为训练目标。  )
+
+[comment]: <> (  例如：`/home/aistudio/work/Old2Life/output/`)
+
+[comment]: <> (+ `checkpoints_dir`:保存结果参数和训练日志存放路径。  )
+
+[comment]: <> (  例如：`/home/aistudio/work/Old2Life/checkpoints \`)
 
 ## **测试方式**： 
 
@@ -69,18 +92,43 @@ bash test_Elm.sh
 ``` 
 
 **必选参数解释**   
-+ `load_pretrainA`：存放A阶段训练模型的路径文件夹。  
-  例如：`/D/Desktop/plan/Old2Life/Global/checkpoints/domainA_SR_old_photos`
-+ `load_pretrainB`：存放B阶段训练模型的路径文件夹。  
-  例如：`/D/Desktop/plan/Old2Life/Global/checkpoints/domainB_old_photos`
-+ `dataroot`：测试性能指标的图片的存放路径。  
-  例如：`/home/aistudio/work/Old2Life/test_old`
-+ `checkpoints_dir`：存放配置信息和模型信息的主文件位置。  
-  例如：`D:\\Desktop\\plan\\Old2Life\\Global\\checkpoints`
-+ `test_input`：测试老照片图片存放的位置。  
-  例如：`/home/aistudio/work/Old2Life/test_old`  
-+ `output_dir`：转换的图片输出路径。  
-  例如：`/home/aistudio/work/Old2Life/output/`
+
+| 参数 | 说明 | 案例 |
+|:---:|:---:|:---:|
+| `load_pretrainA` | 存放A阶段训练模型的路径文件夹。 | `--dataroot /home/aistudio/work/Old2Life/test_old` |
+| `load_pretrainB` | 存放B阶段训练模型的路径文件夹。 | `--outputs_dir /home/aistudio/work/Old2Life/output/` |
+| `dataroot` | 测试性能指标的图片的存放路径。 | `--checkpoints_dir /home/aistudio/work/Old2Life/test_checkpoints` |
+| `checkpoints_dir` | 存放配置信息和模型信息的主文件位置。 | `--checkpoints_dir /home/aistudio/work/Old2Life/test_checkpoints` |
+| `test_input` | 测试老照片图片存放的位置。 | `--checkpoints_dir /home/aistudio/work/Old2Life/test_checkpoints` |
+| `output_dir` | 转换的图片输出路径。 | `--checkpoints_dir /home/aistudio/work/Old2Life/test_checkpoints` |
+| **重要可选参数** | *-* | *-* |
+| `batchSize`| 测试选用的样本数量 | `--batchSize 8` |
+| `gpu_ids`| 选用的gpu序号 | `--gpu_ids 0` |
+| `which_epoch` | 测试采用的模型版本 | `--which_epoch latest` |
+
+[comment]: <> (+ `load_pretrainA`：存放A阶段训练模型的路径文件夹。  )
+
+[comment]: <> (  例如：`/D/Desktop/plan/Old2Life/Global/checkpoints/domainA_SR_old_photos`)
+
+[comment]: <> (+ `load_pretrainB`：存放B阶段训练模型的路径文件夹。  )
+
+[comment]: <> (  例如：`/D/Desktop/plan/Old2Life/Global/checkpoints/domainB_old_photos`)
+
+[comment]: <> (+ `dataroot`：测试性能指标的图片的存放路径。  )
+
+[comment]: <> (  例如：`/home/aistudio/work/Old2Life/test_old`)
+
+[comment]: <> (+ `checkpoints_dir`：存放配置信息和模型信息的主文件位置。  )
+
+[comment]: <> (  例如：`D:\\Desktop\\plan\\Old2Life\\Global\\checkpoints`)
+
+[comment]: <> (+ `test_input`：测试老照片图片存放的位置。  )
+
+[comment]: <> (  例如：`/home/aistudio/work/Old2Life/test_old`  )
+
+[comment]: <> (+ `output_dir`：转换的图片输出路径。  )
+
+[comment]: <> (  例如：`/home/aistudio/work/Old2Life/output/`)
   
 ## 数据集方面介绍
 数据集可以通过两种方式获取：
