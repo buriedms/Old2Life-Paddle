@@ -19,5 +19,4 @@ python Global/train_domain_A.py \
 --outputs_dir /home/aistudio/work/Old2Life/output/ \
 --checkpoints_dir /home/aistudio/work/Old2Life/checkpoints \
 --niter 15 \
---niter_decay 15 \
---continue_train
+--niter_decay 15
