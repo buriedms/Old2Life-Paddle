@@ -50,7 +50,7 @@ fd.write(str(model.module.netG))
 fd.write(str(model.module.netD))
 fd.close()
 
-total_steps = (start_epoch - 1) * dataset_size + epoch_iter
+total_steps = (start_epoch) * dataset_size + epoch_iter
 
 display_delta = total_steps % opt.display_freq
 print_delta = total_steps % opt.print_freq
